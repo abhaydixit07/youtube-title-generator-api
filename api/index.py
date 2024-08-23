@@ -16,7 +16,7 @@ app = Flask(__name__)
 def index():
     return 'Hello, World!'
 
-@app.route('/generate_title', methods=['POST'])
+@app.route('/generate_title', methods=['POST', 'GET'])
 def generate_title():
     # Get the video title from the request JSON body
     content_type = request.content_type
