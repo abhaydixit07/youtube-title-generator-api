@@ -12,6 +12,10 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 # Initialize Flask app
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return 'Hello, World!'
+
 @app.route('/generate_title', methods=['POST'])
 def generate_title():
     # Get the video title from the request JSON body
